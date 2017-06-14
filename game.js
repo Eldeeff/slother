@@ -39,8 +39,7 @@ var start_game = function() {
     board = document.getElementById('game');
     context = board.getContext('2d');
     theme = document.createElement('audio');
-    theme.setAttribute('src', 'assets/frogger.mp3');
-    theme.playbackRate = 0.35;
+    theme.setAttribute('src', 'assets/slother.mp3');
     theme.setAttribute('loop', 'true');
     theme.play();
     sprites = new Image();
