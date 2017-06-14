@@ -39,7 +39,7 @@ var start_game = function() {
     board = document.getElementById('game');
     context = board.getContext('2d');
     theme = document.createElement('audio');
-    theme.setAttribute('src', 'assets/slother.mp3');
+    theme.setAttribute('src', 'assets/frogger.mp3');
     theme.setAttribute('loop', 'true');
     theme.play();
     sprites = new Image();
@@ -267,12 +267,12 @@ var down = function() {
 };
 
 var left = function() {
-    if (bounds_check(game.posX-30, game.posY)) game.posX -= 30;
+    if (bounds_check(game.posX-30, game.posY)) game.posX -= 1;
     game.facing = 'l';
 };
 
 var right = function() {
-    if (bounds_check(game.posX+30, game.posY)) game.posX += 30;
+    if (bounds_check(game.posX+30, game.posY)) game.posX += 1;
     game.facing = 'r';
 };
 
