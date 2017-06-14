@@ -40,6 +40,7 @@ var start_game = function() {
     context = board.getContext('2d');
     theme = document.createElement('audio');
     theme.setAttribute('src', 'assets/frogger.mp3');
+    theme.playbackRate = 0.2;
     theme.setAttribute('loop', 'true');
     theme.play();
     sprites = new Image();
