@@ -373,9 +373,6 @@ var sploosh = function() {
 // object initializers - cars, logs
 var make_cars = function() {
     cars = [
-        make_car(0), 
-        make_car(0, 130, 3), 
-        make_car(0, 260, 3), 
         make_car(1), 
         make_car(2), 
         make_car(2, 150, 0), 
@@ -389,15 +386,15 @@ var make_cars = function() {
 
 var make_car = function(row, x, model) {
     switch(row) {
-        case 1:
+        case 0:
             return new Car(x==null?399:x, rows[row], row, 2, model==null?0:model);
-        case 2:
+        case 1:
             return new Car(x==null?399:x, rows[row], row, 4, model==null?2:model);
-        case 3:
+        case 2:
             return new Car(x==null?-25:x, rows[row], row, 3, model==null?3:model);
-        case 4:
+        case 3:
             return new Car(x==null?399:x, rows[row], row, 3, model==null?0:model);
-        case 5:
+        case 4:
             return new Car(x==null?399:x, rows[row], row, 4, model==null?4:model);
     }
 };
