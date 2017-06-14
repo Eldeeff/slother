@@ -1,5 +1,5 @@
 #Slother#
-[Play it here](https://cdn.rawgit.com/Eldeeff/slother/627a5f32/index.html).
+[Play it here](https://cdn.rawgit.com/Eldeeff/slother/fca78d76/index.html).
 
 A working version of Slother playable in the browser, implemented with JavaScript. Though you won't get very far...
 
