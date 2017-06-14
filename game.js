@@ -388,14 +388,16 @@ var make_cars = function() {
 var make_car = function(row, x, model) {
     switch(row) {
         case 0:
-            return new Car(x==null?399:x, rows[row], row, 2, model==null?0:model);
+            return null;
         case 1:
-            return new Car(x==null?399:x, rows[row], row, 4, model==null?2:model);
+            return new Car(x==null?399:x, rows[row], row, 2, model==null?0:model);
         case 2:
-            return new Car(x==null?-25:x, rows[row], row, 3, model==null?3:model);
+            return new Car(x==null?399:x, rows[row], row, 4, model==null?2:model);
         case 3:
-            return new Car(x==null?399:x, rows[row], row, 3, model==null?0:model);
+            return new Car(x==null?-25:x, rows[row], row, 3, model==null?3:model);
         case 4:
+            return new Car(x==null?399:x, rows[row], row, 3, model==null?0:model);
+        case 5:
             return new Car(x==null?399:x, rows[row], row, 4, model==null?4:model);
     }
 };
