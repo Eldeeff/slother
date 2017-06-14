@@ -39,19 +39,19 @@ var start_game = function() {
     board = document.getElementById('game');
     context = board.getContext('2d');
     theme = document.createElement('audio');
-    theme.setAttribute('src', 'assets/frogger.mp3');
+    theme.setAttribute('src', 'assets/slother.mp3');
     theme.setAttribute('loop', 'true');
     theme.play();
     sprites = new Image();
     deadsprite = new Image();
-    sprites.src = 'assets/frogger_sprites.png'; 
-    deadsprite.src = 'assets/dead_frog.png';
+    sprites.src = 'assets/slother_sprites.png'; 
+    deadsprite.src = 'assets/dead_sloth.png';
     sprites.onload = function() {
         draw_bg();
         draw_info();
         make_cars();
         make_logs();
-        draw_frog();
+        draw_sloth();
         setInterval(game_loop, 50);
     };
 };
@@ -63,7 +63,7 @@ var game_loop = function() {
     draw_logs();
     draw_wins();
     if (game.lives > 0) { 
-        draw_frog();
+        draw_sloth();
     } else {
         game_over();
     }
@@ -89,7 +89,7 @@ var get_arrow_key = function(e) {
     return null;
 };
 
-//drawer functions: bg, info, frogger, cars, logs, wins
+//drawer functions: bg, info, slother, cars, logs, wins
 var draw_bg = function() {
     context.fillStyle='#191970';
     context.fillRect(0,0,399,284);
@@ -140,7 +140,7 @@ var draw_score = function() {
     context.fillText(highscore, 272, 560);
 };
 
-var draw_frog = function() {
+var draw_sloth = function() {
     game.log = log_collision();
     if (game.dead > 0) {
             // @4,2 ; 19x24
