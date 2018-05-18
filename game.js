@@ -66,10 +66,10 @@
     theme.setAttribute('loop', 'true');
     theme.play();
     $(window).focus(function () {
-      theme.play()
+      theme.play();
     });
     $(window).blur(function () {
-      theme.pause()
+      theme.pause();
     });
     $('body').one('pointerdown keydown scroll', function () {
       theme.play();
