@@ -65,6 +65,15 @@
     theme.setAttribute('src', 'assets/slother.mp3');
     theme.setAttribute('loop', 'true');
     theme.play();
+    $(window).focus(function () {
+      theme.play()
+    });
+    $(window).blur(function () {
+      theme.pause()
+    });
+    $('body').one('pointerdown keydown scroll', function () {
+      theme.play();
+    });
     sprites = new Image();
     deadsprite = new Image();
     sprites.src = 'assets/slother_sprites.png';
